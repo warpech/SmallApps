@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongRunningTransactionApp", "LongRunningTransactionApp\LongRunningTransactionApp.csproj", "{A8C8B580-012D-4676-975B-3E309078A93B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8C8B580-012D-4676-975B-3E309078A93B}.Debug|x64.ActiveCfg = Debug|x64
+		{A8C8B580-012D-4676-975B-3E309078A93B}.Debug|x64.Build.0 = Debug|x64
+		{A8C8B580-012D-4676-975B-3E309078A93B}.Release|x64.ActiveCfg = Release|x64
+		{A8C8B580-012D-4676-975B-3E309078A93B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13CD700D-3CB2-462B-ABBE-3EBFDC1A033A}
+	EndGlobalSection
+EndGlobal
