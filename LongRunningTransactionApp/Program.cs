@@ -72,6 +72,22 @@ namespace LongRunningTransactionApp
                     return page2; ;
                 });
             });
+
+            Handle.GET("/master", () =>
+            {
+                return Db.Scope(() =>
+                {
+                    var master = new MasterPage();
+
+                    var person = Db.SQL<Person>("SELECT p FROM Person p")
+                        .FirstOrDefault();
+
+                    master.PersonJson = new PersonJson { Data = person };
+                    master.Page2 = new Page2 { Data = person };
+
+                    return master;
+                });
+            });
         }
     }
 }

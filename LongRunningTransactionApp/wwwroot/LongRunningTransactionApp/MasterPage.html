@@ -1,0 +1,16 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<template>
+    <dom-bind>
+        <template is="dom-bind">
+            <div style="display: flex">
+                <div style="padding: 10px; background: #ffeaa7">
+                    <imported-template href="{{model.PersonJson.Html}}" model="{{model.PersonJson}}"></imported-template>
+                </div>
+                <div style="padding: 10px; background: #fab1a0">
+                    <imported-template href="{{model.Page2.Html}}" model="{{model.Page2}}"></imported-template>
+                </div>
+            </div>
+        </template>
+    </dom-bind>
+</template>

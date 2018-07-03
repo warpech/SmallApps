@@ -50,6 +50,9 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MasterPage.json.cs">
+      <DependentUpon>MasterPage.json</DependentUpon>
+    </Compile>
     <Compile Include="Page2.json.cs">
       <DependentUpon>Page2.json</DependentUpon>
     </Compile>
@@ -66,10 +69,16 @@
     <TypedJSON Include="Page2.json">
       <Generator>MsBuild:Compile</Generator>
     </TypedJSON>
+    <TypedJSON Include="MasterPage.json">
+      <Generator>MsBuild:Compile</Generator>
+    </TypedJSON>
     <None Include="wwwroot\LongRunningTransactionApp\PersonJson.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\LongRunningTransactionApp\page2.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\LongRunningTransactionApp\MasterPage.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(StarcounterBin)\Starcounter.MsBuild.targets" />
