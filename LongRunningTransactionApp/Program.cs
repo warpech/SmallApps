@@ -54,22 +54,17 @@ namespace LongRunningTransactionApp
 
             Handle.GET("/page2", () =>
             {
-                return Db.Scope(() =>
+                Session.Ensure();
+
+                var personJson = Self.GET<PersonJson>("/LongRunningTransactionApp");
+                return personJson.AttachedScope.Scope(() =>
                 {
-                    Session.Ensure();
-                    
                     var person = Db.SQL<Person>("SELECT p FROM Person p")
                         .FirstOrDefault();
-                    
-                    var page2 = Session.Current.Store["Page2"] as Page2;
-                    if (page2 == null)
-                    {
-                        page2 = new Page2 { Data = person };
-                        Session.Current.Store["Page2"] = page2;
-                        return page2;
-                    }
 
-                    return page2; ;
+                    var page2 = new Page2 { Data = person };
+
+                    return page2;
                 });
             });
         }
